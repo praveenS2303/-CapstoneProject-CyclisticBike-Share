@@ -1,4 +1,14 @@
 # CapstoneProject-CyclisticBike-Share
+
+Below are the links to everything related to the Capstone Project.
+
+1. [FinalAnalysis.R](https://github.com/praveenS2303/-CapstoneProject-CyclisticBike-Share/blob/main/AnalysisCode.R) - analyzed the data set from case study 1 in the Google Data Analytics Course using R. I did not do any data visualization in R.
+
+2. [FinalAnalysisTableau.R](https://github.com/praveenS2303/-CapstoneProject-CyclisticBike-Share/blob/main/FinalAnalysisTableau) - used code to create a specific data frame to use in Tableau. Deleted unncessary columns to make the code run quicker in Tableau.
+
+3. [Tableau Dashboard](https://public.tableau.com/app/profile/praveen.singh8077/viz/GoogleCapstoneProjectCyclisticBike-share/CyclisticProject) - created a dashboard in Tableau summarizing the data
+
+
 # BACKGROUND
 Cyclistic is a fictional bike sharing program which features more than 5,800 bikes and 600 docking stations. It offers reclining bikes, hand tricycles, and cargo bikes, making it more inclusive to people with disabilities and riders who can't use a standard two-wheeled bike. It was founded in 2016 and has grown tremendously into a fleet of bicycles that are geotracked and locked into a network of 692 stations across Chicago. The bikes can be unlocked from one station and returned to any other station in the system anytime. 
 
