@@ -22,7 +22,7 @@ Below I will describe step-by-step the process I used to for this project. If yo
 # PROCESS:
 Overview: I first analyzed the data separately (each month) in Excel, then used R to analyze the data as a whole (one year). Finally I created a dashboard in Tableau.
 # R 
-I originally wanted to use SQL but the files were too big to upload and I couldn't figure out how to utilize Google Cloud Platform. Instead I used R to analyze the data because it could handle all of the information quicker than Excel, and I wanted to work on my R skills. Below is my general process in R. 
+I began downloading the data from divvy-tripdata .I originally wanted to use SQL but the files were too big to upload and I couldn't figure out how to utilize Google Cloud Platform. Instead I used R to analyze the data because it could handle all of the information quicker than Excel, and I wanted to work on my R skills. Below is my general process in R. 
 
 
 View my full code on my Github for this capstone project [here](https://github.com/praveenS2303/-CapstoneProject-CyclisticBike-Share/blob/main/AnalysisCode.R). 
