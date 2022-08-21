@@ -308,206 +308,21 @@ cyclistic_date %>% group_by( member_casual) %>%
   summarise_at(vars(ride_length),
                list(time = mean))
 
-#----------------TYPE OF BIKE---------------------
 
-#total rides by member type 
-cyclistic_date %>% group_by(member_casual, rideable_type) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
+#--------------------------------Creating Plots using ggplot------------------------------
 
-#average ride_length
-cyclistic_date %>% group_by(rideable_type) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#-----------------------HOUR-------------------------
-
-#average ride_length by member type
-cyclistic_date %>% group_by(hour, member_casual) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean)) %>% 
-  print(n=48) #lets you view entire tibble
-
-#average ride_length
-cyclistic_date %>% group_by(hour) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean)) %>% 
-  print(n=24) #lets you view entire tibble
-
-#--------------------TIME OF DAY---------------------
-
-#----morning----
-
-#average ride length by member type
 cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(time_of_day == "Morning") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
+  group_by(member_casual, day_of_week) %>%  #groups by usertype and weekday
+  summarise(number_of_rides = n()							#calculates the number of rides and average duration 
+            ,average_duration = mean(ride_length)) %>% 		# calculates the average duration
+  arrange(member_casual, day_of_week)%>%	
+  ggplot(aes(x = day_of_week, y = number_of_rides, fill = member_casual)) +
+  geom_col(position = "dodge")
 
-#average ride length
 cyclistic_date %>% 
-  filter(time_of_day == "Morning") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#----afternoon----
-
-#average ride length by member type
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(time_of_day == "Afternoon") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  filter(time_of_day == "Afternoon") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#----evening----
-
-#average ride length by member type
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(time_of_day == "Evening") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  filter(time_of_day == "Evening") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#----night----
-
-#average ride length by member type 
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(time_of_day == "Night") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  filter(time_of_day == "Night") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#---all times of day---
-
-#average ride length by member type
-cyclistic_date %>% 
-  group_by(time_of_day, member_casual) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  group_by(time_of_day) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#-------------------DAY OF THE WEEK-----------------
-
-#average ride_length by member type
-cyclistic_date %>% group_by(member_casual, day_of_week) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride_length 
-cyclistic_date %>% group_by(day_of_week) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#-----------------DAY OF THE MONTH------------------
-
-#average ride_length by member type
-cyclistic_date %>% group_by(day, member_casual) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean)) %>% 
-  print(n=62)  #lets you view entire tibble
-
-#average ride_length
-cyclistic_date %>% group_by(day) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean)) %>% 
-  print(n=31)  #lets you view entire tibble
-
-#---------------------MONTH--------------------------
-
-#average ride_length by member type
-cyclistic_date %>% group_by(month, member_casual) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean)) %>% 
-  print(n=24)  #lets you view entire tibble
-
-#average ride_length
-cyclistic_date %>% group_by(month) %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#----------------------SEASON-------------------------
-
-#-----spring------
-
-#average ride length by member type
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(season == "Spring") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  filter(season == "Spring") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#-----summer------
-
-#average ride length by member type for summer 
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(season == "Summer") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length for summer 
-cyclistic_date %>% 
-  filter(season == "Summer") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#-----fall------
-
-#average ride length by member type
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(season == "Fall") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  filter(season == "Fall") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#-----winter-----
-
-#average ride length by member type
-cyclistic_date %>% 
-  group_by(member_casual) %>% 
-  filter(season == "Winter") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
-#average ride length
-cyclistic_date %>% 
-  filter(season == "Winter") %>% 
-  summarise_at(vars(ride_length),
-               list(time = mean))
-
+  group_by(member_casual, day_of_week) %>% 
+  summarise(number_of_rides = n()
+            ,average_duration = mean(ride_length)) %>% 
+  arrange(member_casual, day_of_week)  %>% 
+  ggplot(aes(x = day_of_week, y = average_duration, fill = member_casual)) +
+  geom_col(position = "dodge")
