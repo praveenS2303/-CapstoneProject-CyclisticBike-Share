@@ -138,6 +138,7 @@ To view my completed dashboard click [here](https://public.tableau.com/app/profi
 Made minor edits to design elements and created final dashboard.
 
 # Final Summary
+
   1. The most popular bike among with riders was the classic.
 
   2. Busiest time was afternoon and the peak time was at 5PM for both casual riders and members. 
@@ -148,4 +149,28 @@ Made minor edits to design elements and created final dashboard.
 
   5. Most rides by User Type was members but casual riders weren't far behind. 
 
-The average ride length was 24 minutes but casual riders on average rode 23 minutes longer than members. 
+  6. The average ride length was 19 minutes but casual riders on average ride 14 minutes longer than members. 
+# BUSINESS SUGGESTIONS
+This was the hardest part for me for the whole project. I have never provided suggestions for a business nor worked in marketing. Any feedback here would be appreciated. 
+
+These are my suggestions for the marketing team to convert casual riders to annual members:
+
+ 1. Personalize discounts and show perks in the membership program based on their preferences and riding habits.
+
+ 2. Emphasize the benefits of memberships, including discounts during busy times of the year like during Summer, or on the weekends. 
+
+ 3. Have existing members to share their stories about how using Cyclistic's system has changed their life, to create a sense of community, offer a discount if they do so this will help encourage new riders to join the program.
+ 4. 
+# WHAT I LEARNED
+Below is what I learned/practiced from over 40 hours spent on this project: 
+
+ 1. Pivot Tables in Microsoft Excel
+
+ 2. Practice using R for data analysis and cleaning specifically using the tidyverse package for data analysis 
+
+ 3. Graphs in Tableau, edited visual elements along with creating different charts and filters. 
+
+ 4. Design elements of an effective dashboard
+ 
+
+
